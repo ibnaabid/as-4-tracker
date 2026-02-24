@@ -91,3 +91,22 @@ cardsContainer.addEventListener("click", function(e) {
 });
 
 count();
+
+
+function checkEmpty(section) {
+  if (section === "interview") {
+    if (interviewCount.length === 0) {
+      emptyMessage.classList.remove("hidden");
+    } else {
+      emptyMessage.classList.add("hidden");
+    }
+  }
+
+  if (section === "rejected") {
+    if (rejectedCount.length === 0) {
+      emptyMessage.classList.remove("hidden");
+    } else {
+      emptyMessage.classList.add("hidden");
+    }
+  }
+}
